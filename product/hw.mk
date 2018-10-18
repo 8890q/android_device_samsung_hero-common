@@ -5,3 +5,7 @@ PRODUCT_PACKAGES += \
 # Touch
 PRODUCT_PACKAGES += \
 	vendor.lineage.touch@1.0-service.samsung
+
+# hardware/samsung/AdvancedDisplay (MDNIE)
+PRODUCT_PACKAGES += \
+    AdvancedDisplay 
