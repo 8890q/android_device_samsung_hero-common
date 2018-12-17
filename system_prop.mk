@@ -14,6 +14,10 @@
 # GNU General Public License for more details.
 #
 
+# Configstore
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+
 # Dalvik/Art
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sys.fw.dex2oat_thread_count=4 \
