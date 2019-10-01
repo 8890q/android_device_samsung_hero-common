@@ -42,10 +42,6 @@ on post-fs-data
 
     setprop vold.post_fs_data_done 1
 
-# sem_daemon permission
-    chown system system /efs/sec_efs/ssp_data
-    chmod 0644 /efs/sec_efs/ssp_data
-
 # Permissions for audio
     chown system radio /sys/class/audio/earjack/select_jack
     chown system radio /sys/class/audio/earjack/key_state
@@ -138,7 +134,6 @@ on boot
     # write /proc/sys/vm/min_free_kbytes 32768
     # write /proc/sys/vm/min_free_order_shift 1
     write /sys/module/selinux/parameters/selinux_fakemode 0
-    setenforce 0
     write /sys/fs/selinux/enforce 0
 
 # SSWAP
@@ -347,16 +342,16 @@ on fs
     setprop ro.crypto.fuse_sdcard true
 
 #For Absolute Persistence Partition
-    mkdir /persdata 0755 system system
-    mkdir /persdata/absolute 0750 system system
+    #mkdir /persdata 0755 system system
+    #mkdir /persdata/absolute 0750 system system
 
-    wait /dev/block/platform/155a0000.ufs/by-name/PERSDATA
-    mount ext4 /dev/block/platform/155a0000.ufs/by-name/PERSDATA /persdata/absolute nosuid nodev noatime noauto_da_alloc,discard,journal_async_commit,errors=panic
+    #wait /dev/block/platform/155a0000.ufs/by-name/PERSDATA
+    #mount ext4 /dev/block/platform/155a0000.ufs/by-name/PERSDATA /persdata/absolute nosuid nodev noatime noauto_da_alloc,discard,journal_async_commit,errors=panic
 
-    chown system system /persdata
-    chmod 0755 /persdata
-    chown system system /persdata/absolute
-    chmod 0750 /persdata/absolute
+    #chown system system /persdata
+    #chmod 0755 /persdata
+    #chown system system /persdata/absolute
+    #chmod 0750 /persdata/absolute
 
 # Permissions for TouchScreen
     chown system radio /sys/class/sec/tsp/cmd
@@ -407,7 +402,7 @@ on fs
 
 # Permissions for LCD Adaptive Control
     chown system system /sys/class/lcd/panel/adaptive_control
-    cmod 0660 /sys/class/lcd/panel/adaptive_control
+    chmod 0660 /sys/class/lcd/panel/adaptive_control
 
 # Permissions for LCD
     chown system radio /sys/class/lcd/panel/manufacture_code
@@ -667,7 +662,7 @@ service umount_service /system/bin/umount -D /preload
 
 # Support Preload install apks
 on property:persist.sys.storage_preload=1
-    mount ext4 /dev/block/platform/155a0000.ufs/by-name/HIDDEN /preload nosuid nodev ro barrier=1
+    #mount ext4 /dev/block/platform/155a0000.ufs/by-name/HIDDEN /preload nosuid nodev ro barrier=1
     setprop storage.preload.complete 1
 
 on property:persist.sys.storage_preload=0
@@ -683,10 +678,6 @@ on property:ro.debuggable=1
     write /sys/module/kgdboc/parameters/kgdboc ttyFIQ1
     write /sys/module/fiq_debugger/parameters/kgdb_enable 1
 
-on property:ro.bootmode=charger
-    wait /dev/block/platform/155a0000.ufs/by-name/EFS
-    mount ext4 /dev/block/platform/155a0000.ufs/by-name/EFS /efs nosuid nodev noatime noauto_da_alloc,discard,journal_async_commit,errors=panic
-
 on charger
 # Set cpu governor to powersave while in charging mode
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor powersave
@@ -698,10 +689,6 @@ service charger /charger
     class charger
     critical
     seclabel u:r:charger:s0
-
-# sem_daemon permission
-    chown system system /efs/sec_efs/ssp_data
-    chmod 0644 /efs/sec_efs/ssp_data
 
 # sem_daemon
 service sem_daemon /system/bin/sem_daemon

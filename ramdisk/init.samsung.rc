@@ -248,6 +248,10 @@ on post-fs
     chmod 0440 /proc/reset_summary 
 
 on post-fs-data
+    # avoid USB crash
+    setprop persist.adb.nonblocking_ffs 0
+    setprop ro.adb.nonblocking_ffs 0
+
 # [ SEC_SELINUX_PORTING_COMMON
     # Reload SE Android Policy
 
@@ -633,6 +637,10 @@ service mobicore /system/bin/mcDriverDaemon -r /system/app/FFFFFFFF0000000000000
     user system
     group system
     disabled
+
+# Apexy shit
+on property:apexd.status=ready
+    mount none /system/etc/swcodec/ld.config.txt /apex/com.android.media.swcodec/etc/ld.config.txt bind
 
 # strongSwan VPN
 service charon /system/bin/charon

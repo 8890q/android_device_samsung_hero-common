@@ -90,7 +90,7 @@ PRODUCT_PACKAGES += \
 ### DTB TOOL
 ###########################################################
 
-PRODUCT_PACKAGES += \
+PRODUCT_HOST_PACKAGES += \
 	dtbhtoolExynos
 
 # Inherit board specific products

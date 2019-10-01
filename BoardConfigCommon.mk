@@ -27,6 +27,10 @@ TARGET_SOC := exynos8890
 TARGET_BOOTLOADER_BOARD_NAME := universal8890
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
+USE_XML_AUDIO_POLICY_CONF := 1
+BUILD_BROKEN_DUP_RULES := true
+BOARD_ROOT_EXTRA_FOLDERS += efs cpefs
+SELINUX_IGNORE_NEVERALLOWS := true
 
 # Thermal hal
 TARGET_THERMAL_HAL := slsi
@@ -41,19 +45,13 @@ TARGET_USES_64_BIT_BINDER := true
 TARGET_EXFAT_DRIVER := sdfat
 
 # Security
-VENDOR_SECURITY_PATCH := 2019-06-01
+VENDOR_SECURITY_PATCH := 2019-09-01
 
 # Fonts
 EXTENDED_FONT_FOOTPRINT := true
 
-# Init
-TARGET_INIT_VENDOR_LIB := libinit_sec
-
 # HIDL Manifest
 DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/configs/manifest.xml
-
-# Hax
-MALLOC_SVELTE := true
 
 # Image
 BOARD_CUSTOM_BOOTIMG := true
@@ -73,7 +71,7 @@ BOARD_OVERRIDE_RS_CPU_VARIANT_32 := cortex-a53
 BOARD_OVERRIDE_RS_CPU_VARIANT_64 := exynos-m1
 
 # SELinux
-# BOARD_SEPOLICY_DIRS := device/samsung/hero-common/sepolicy
+BOARD_SEPOLICY_DIRS := device/samsung/hero-common/sepolicy
 
 # SECComp filters
 BOARD_SECCOMP_POLICY += device/samsung/hero-common/seccomp
