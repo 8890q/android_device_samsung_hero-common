@@ -55,6 +55,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.debug.wfd.enable=1
 
+# Smaug does not support ION needed for Codec 2.0
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.stagefright.ccodec=0
+
 # USB
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.adb.secure=0 \
