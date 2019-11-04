@@ -80,8 +80,7 @@ on property:ro.multisim.simslotcount=1
 on property:ro.multisim.simslotcount=2
     setprop persist.radio.multisim.config dsds
 
-service cpboot-daemon /sbin/cbd -d -tss310 -bm -mm -P platform/155a0000.ufs/by-name/RADIO
+service cpboot-daemon /vendor/bin/cbd -d -tss310 -bm -mm -P platform/155a0000.ufs/by-name/RADIO -n /efs
     class main
     user root
-    group radio cache inet misc audio sdcard_rw log sdcard_r shell
-
+    group radio cache inet misc audio sdcard_rw log sdcard_r shell system
