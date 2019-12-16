@@ -85,6 +85,10 @@ PRODUCT_PACKAGES += \
 	e2fsck_static \
 	resize2fs_static
 
+# Simstat service
+PRODUCT_PACKAGES += \
+    simstat
+
 ###########################################################
 ### DTB TOOL
 ###########################################################
