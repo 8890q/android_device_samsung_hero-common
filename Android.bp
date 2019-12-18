@@ -3,5 +3,4 @@ subdirs = [
     "camera",
     "usb",
     "sensors",
-    "radio",
 ]
