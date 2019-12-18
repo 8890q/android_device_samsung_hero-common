@@ -29,11 +29,6 @@
                              samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
                 </mixPort>
 
-                <mixPort name="hdmi" role="source" flags="AUDIO_OUTPUT_FLAG_MULTI_CH">
-                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
-                             samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO,AUDIO_CHANNEL_OUT_5POINT1"/>
-                </mixPort>
-
                 <!-- Capture(Input) Streams -->
                 <mixPort name="primary-in" role="sink">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
