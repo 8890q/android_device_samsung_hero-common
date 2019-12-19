@@ -1,6 +1,6 @@
 # Livedisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service.samsung-exynos
+	vendor.lineage.livedisplay@2.0-service.samsung-exynos
 
 # Touch
 PRODUCT_PACKAGES += \
