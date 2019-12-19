@@ -33,6 +33,9 @@ BOARD_ROOT_EXTRA_FOLDERS += efs cpefs
 SELINUX_IGNORE_NEVERALLOWS := true
 TARGET_POWERHAL_VARIANT := samsung
 
+# DT2W
+TARGET_TAP_TO_WAKE_NODE := /sys/android_touch/doubletap2wake
+
 # Thermal hal
 TARGET_THERMAL_HAL := slsi
 
