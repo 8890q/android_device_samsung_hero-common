@@ -89,6 +89,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     simstat
 
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.0-impl \
+    android.hardware.health@2.0-service
+
+# Trust HAL
+PRODUCT_PACKAGES += \
+    vendor.lineage.trust@1.0-service
+
 ###########################################################
 ### DTB TOOL
 ###########################################################
