@@ -52,13 +52,8 @@ TARGET_SCREEN_WIDTH := 1440
 ### POWER
 ###########################################################
 
-#PRODUCT_PACKAGES += \
-#	power.universal8890 \
-#	android.hardware.power@1.0-service \
-#	android.hardware.power@1.0-impl
-
 PRODUCT_PACKAGES += \
-	power.exynos5 \
+	power.universal8890 \
 	android.hardware.power@1.0-impl
 
 ###########################################################
