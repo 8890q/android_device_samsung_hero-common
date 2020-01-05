@@ -123,6 +123,9 @@ PRODUCT_HOST_PACKAGES += \
 # System properties
 -include $(LOCAL_PATH)/system_prop.mk
 
+# Setup dalvik vm configs
+$(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
+
 # Enable stats logging in LMKD
 TARGET_LMKD_STATS_LOG := true
 
