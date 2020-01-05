@@ -6,7 +6,7 @@ PRODUCT_PACKAGES += \
 	camera.device@1.0-impl \
 	android.hardware.camera.provider@2.4-impl \
 	android.hardware.camera.provider@2.4-service \
-	Camera2
+	Snap
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/camera/external_camera_config.xml:system/vendor/etc/external_camera_config.xml
