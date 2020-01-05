@@ -20,9 +20,9 @@ PRODUCT_PACKAGES += \
 	Stk
 # RIL
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.2 \
-    android.hardware.radio@1.1
+    android.hardware.radio@1.3-radio-service.samsung
 
+#	android.hardware.radio@1.1
 #	android.hardware.radio@1.0 \
 #	android.hardware.radio.deprecated@1.0 \
 
