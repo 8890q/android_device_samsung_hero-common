@@ -1,3 +1,5 @@
+DEVICE_PATH := device/samsung/hero-common
+
 # Packages
 PRODUCT_PACKAGES += \
 	libion_exynos \
@@ -23,3 +25,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.sf.lcd_density=560 \
 	debug.hwc.winupdate=1 \
 	debug.hwc.otf=1
+
+# Additional native libraries
+PRODUCT_COPY_FILES += \
+	$(DEVICE_PATH)/configs/public.libraries.txt:system/vendor/etc/public.libraries.txt
