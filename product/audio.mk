@@ -15,6 +15,8 @@ PRODUCT_PACKAGES += \
 	android.hardware.audio@2.0-impl \
 	android.hardware.audio.effect@2.0-impl \
 	libtinycompress
+# use this to build 32 bit hal only might need to adjust aidl manifest
+# audio.primary.universal8890_32
 
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
