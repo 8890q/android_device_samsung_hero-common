@@ -52,6 +52,9 @@ VENDOR_SECURITY_PATCH := 2019-11-01
 # Fonts
 EXTENDED_FONT_FOOTPRINT := true
 
+# Exclude AudioFX
+TARGET_EXCLUDES_AUDIOFX := true
+
 # HIDL Manifest
 DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/configs/manifest.xml
 
