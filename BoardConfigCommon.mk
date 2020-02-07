@@ -34,9 +34,6 @@ SELINUX_IGNORE_NEVERALLOWS := true
 TARGET_POWERHAL_VARIANT := samsung
 AUDIOSERVER_MULTILIB := 32
 
-# DT2W
-TARGET_TAP_TO_WAKE_NODE := /sys/android_touch/doubletap2wake
-
 # Thermal hal
 TARGET_THERMAL_HAL := slsi
 

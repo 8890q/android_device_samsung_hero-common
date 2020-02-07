@@ -56,9 +56,7 @@ TARGET_SCREEN_WIDTH := 1440
 ###########################################################
 
 PRODUCT_PACKAGES += \
-	power.universal8890 \
-	android.hardware.power@1.0-service \
-	android.hardware.power@1.0-impl \
+	android.hardware.power@1.0-service.exynos
 
 ###########################################################
 ### CHARGER
