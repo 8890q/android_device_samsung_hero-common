@@ -19,6 +19,9 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/hero-common/overlay
 
 LOCAL_PATH := device/samsung/hero-common
 
+# Shipping API level
+$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
+
 ###########################################################
 ### RAMDISK
 ###########################################################
