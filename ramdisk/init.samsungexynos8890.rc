@@ -704,6 +704,7 @@ service sem_daemon /system/bin/sem_daemon
 on property:sys.boot_completed=1
     setprop security.semdaemonfinish 0
     start sem_daemon
+    setprop sys.io.scheduler bfq
 
 on property:security.semdaemonfinish=1
     stop sem_daemon
