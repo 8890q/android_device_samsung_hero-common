@@ -89,6 +89,11 @@ PRODUCT_PACKAGES += \
 	e2fsck_static \
 	resize2fs_static
 
+# Configstore
+PRODUCT_PACKAGES += \
+    android.hardware.configstore@1.0-impl \
+    android.hardware.configstore@1.0-service
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.0-impl \
