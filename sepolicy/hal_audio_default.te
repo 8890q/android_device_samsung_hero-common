@@ -1,0 +1,2 @@
+allow hal_audio_default efs_file:dir search;
+

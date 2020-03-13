@@ -1,0 +1,46 @@
+# /dev/ttySAC3
+type bluetooth_device, dev_type;
+
+# /dev/block/mmcblk0p[0-9] (/dev/mbin0)
+type emmcblk_device, file_type;
+
+# Radio block device
+type radio_block_device, dev_type;
+# Efs block device
+type efs_block_device, dev_type;
+# Persist block device
+type persist_block_device, dev_type;
+
+# /dev/umts_boot*, /dev/ehci_power
+type mif_device, dev_type;
+
+# /dev/rfkill
+type rfkill_device, dev_type;
+
+# /dev/s5p-smem
+type secmem_device, dev_type;
+
+# /dev/bbd*, /dev/ttyBCM[0-9]*
+type bbd_device, dev_type;
+
+# /dev/vfsspi
+type fingerprint_device, dev_type;
+
+# /dev/batch_io
+type sensor_device, dev_type;
+
+# /dev/knox_kap
+type knox_device, dev_type;
+
+# /dev/seiren
+type seiren_device, dev_type;
+
+# GPS
+type gps_device, dev_type;
+
+type cid_block_device, dev_type;
+
+type mobicore_data_file, file_type;
+
+
+
