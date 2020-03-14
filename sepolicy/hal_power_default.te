@@ -22,5 +22,10 @@ allow hal_power_default sysfs_graphics:file rw_file_perms;
 allow hal_power_default sysfs_dt2w:file { getattr open read write };
 
 # TSP
-allow hal_power_default sysfs_tsp:dir r_dir_perms;
-allow hal_power_default sysfs_tsp:file rw_file_perms;
+allow hal_power_default sysfs_sec_tsp:dir r_dir_perms;
+allow hal_power_default sysfs_sec_tsp:file rw_file_perms;
+
+# avc: denied { read } for name="input" dev="sysfs" ino=12953 scontext=u:r:hal_power_default:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=0
+allow hal_power_default sysfs:dir read;
+allow hal_power_default sysfs:dir open;
+

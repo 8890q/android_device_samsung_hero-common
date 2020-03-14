@@ -30,5 +30,5 @@ allow kernel app_efs_file:file { read write open };
 allow kernel sysfs_input:file { open read };
 allow kernel sysfs_sensors:file { open read };
 
-allow kernel sysfs_sec:dir search;
-
+allow kernel sysfs_sec_key:dir search;
+allow kernel sysfs_sec_key:file { open read };

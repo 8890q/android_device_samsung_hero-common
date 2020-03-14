@@ -6,4 +6,3 @@ type modemloader_prop, property_type;
 
 # mobicore (tee)
 type tee_prop, property_type;
-

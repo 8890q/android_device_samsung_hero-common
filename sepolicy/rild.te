@@ -67,6 +67,12 @@ allow rild self:capability chown;
 allow rild audioserver:dir search;
 allow rild audioserver:file { read open getattr };
 
+allow rild radio_vendor_data_file:dir { add_name open read remove_name write };
+allow rild radio_vendor_data_file:file { create getattr ioctl lock open read unlink write };
+
 allow rild init:dir search;
 allow rild init:file { getattr open read };
+allow rild radio_vendor_data_file:dir search;
+
+set_prop(rild, cpboot-daemon_prop)
 

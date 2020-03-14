@@ -5,4 +5,6 @@ allow hal_camera_default hal_graphics_mapper_hwservice:hwservice_manager find;
 allow hal_camera_default camera_data_file:file { open read };
 allow hal_camera_default camera_data_file:dir search;
 
+allow hal_camera_default debugfs_ion:dir search;
+
 vndbinder_use(hal_camera_default)

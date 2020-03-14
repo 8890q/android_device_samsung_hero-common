@@ -7,9 +7,12 @@ allow bluetooth wifi_data_file:file r_file_perms;
 
 allow bluetooth gps_device:chr_file { ioctl open read write };
 
-
-# /dev/ttySAC3
-
 # /data/.cid.info
 allow bluetooth wifi_data_file:file r_file_perms;
+
+allow bluetooth sysfs_bluetooth_writable:file { open read write };
+allow bluetooth sysfs_bluetooth_writable:dir search;
+
+# Resolve avc: denied { write } for comm="bt_hci_thread" name="state" dev="sysfs" ino=24492 scontext=u:r:bluetooth:s0 tcontext=u:object_r:sysfs:s0 tclass=file, does not give the path
+allow bluetooth sysfs:file write;
 

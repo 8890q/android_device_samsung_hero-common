@@ -1,19 +1,20 @@
-# bluetooth
-persist.bluetooth_fw_ver    u:object_r:bluetooth_prop:s0
-ro.bluetooth.tty            u:object_r:bluetooth_prop:s0
-wc_transport.               u:object_r:bluetooth_prop:s0
+# cbd
+vendor.cbd.rfs_check_done          u:object_r:cpboot-daemon_prop:s0
 
 # modemloader
-hw.revision            u:object_r:modemloader_prop:s0
-ro.cbd.dt_revision     u:object_r:modemloader_prop:s0
-ril.cbd.dt_revision    u:object_r:modemloader_prop:s0
-ro.modemloader.done    u:object_r:modemloader_prop:s0
+vendor.cbd.dt_revision    u:object_r:modemloader_prop:s0
 
 # mobicore
 sys.mobicoredaemon.enable         u:object_r:tee_prop:s0
 
 # radio
-persist.ril.modem.board    u:object_r:radio_prop:s0
-persist.ril.ims.eutranParam u:object_r:radio_prop:s0
-persist.ril.ims.utranParam  u:object_r:radio_prop:s0
-persist.ril.interfaceconf.failed u:object_r:radio_prop:s0
+persist.ril.modem.board            u:object_r:radio_prop:s0
+ril.ims.ecsupport                  u:object_r:radio_prop:s0
+ril.ims.ltevoicesupport            u:object_r:radio_prop:s0
+
+# wifi
+wifi.active.interface      u:object_r:wifi_prop:s0
+wifi.direct.interface      u:object_r:wifi_prop:s0
+wifi.interface             u:object_r:wifi_prop:s0
+wlan.driver.status         u:object_r:wifi_prop:s0
+

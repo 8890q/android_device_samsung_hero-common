@@ -1,7 +1,9 @@
 #### lhd
 #
+
 type lhd, domain;
-type lhd_exec, exec_type, file_type;
+type lhd_exec, exec_type, vendor_file_type, file_type;
+type sysfs_lhd, fs_type, sysfs_type, fs_type, mlstrustedobject;
 
 allow lhd bbd_device:chr_file { read write getattr open ioctl };
 
@@ -12,5 +14,9 @@ allow lhd node:tcp_socket node_bind;
 allow lhd port:tcp_socket name_bind;
 allow lhd sec_efs_file:dir search;
 allow lhd self:tcp_socket { bind connect create };
+
+allow lhd hwservicemanager_prop:file read;
+allow lhd hwservicemanager_prop:file open;
+allow lhd hwservicemanager_prop:file getattr;
 
 init_daemon_domain(lhd);

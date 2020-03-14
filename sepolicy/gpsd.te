@@ -17,6 +17,7 @@ binder_use(gpsd)
 
 # Sockets
 type_transition gpsd gps_data_file:sock_file gps_socket;
+type_transition gpsd gps_vendor_file:sock_file gps_socket;
 
 allow gpsd dnsproxyd_socket:sock_file write;
 allow gpsd fwmarkd_socket:sock_file write;
@@ -31,7 +32,9 @@ allow gpsd sysfs_gps:file rw_file_perms;
 # /dev/ttySAC3
 allow gpsd gps_device:chr_file { setattr rw_file_perms };
 allow gpsd gps_data_file:dir rw_dir_perms;
+allow gpsd gps_vendor_file:dir rw_dir_perms;
 allow gpsd gps_data_file:fifo_file create_file_perms;
+allow gpsd gps_vendor_file:fifo_file create_file_perms;
 
 allow gpsd sysfs_wake_lock:file rw_file_perms;
 
@@ -51,3 +54,8 @@ allow gpsd node:tcp_socket node_bind;
 # hwservicemanager ready prop
 allow gpsd hwservicemanager:binder call;
 allow gpsd hwservicemanager_prop:file { open read getattr};
+
+allow gpsd gps_vendor_file:file write;
+allow gpsd gps_vendor_file:file open;
+allow gpsd gps_vendor_file:file lock;
+

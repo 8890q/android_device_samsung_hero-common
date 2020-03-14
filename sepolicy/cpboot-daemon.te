@@ -24,8 +24,10 @@ allow cpboot-daemon kmsg_device:chr_file rw_file_perms;
 allow cpboot-daemon mif_device:chr_file rw_file_perms;
 # /dev/mbin0
 allow cpboot-daemon emmcblk_device:blk_file r_file_perms;
+
 # /dev/spi_boot_link
 allow cpboot-daemon radio_device:chr_file rw_file_perms;
+
 # /dev/block/mmcblk0p13
 allow cpboot-daemon block_device:dir r_dir_perms;
 allow cpboot-daemon radio_block_device:blk_file r_file_perms;
@@ -44,6 +46,15 @@ allow cpboot-daemon efs_file:file rw_file_perms;
 allow cpboot-daemon proc_cmdline:file r_file_perms;
 allow cpboot-daemon proc_dt_firmware:dir search;
 allow cpboot-daemon proc_dt_firmware:file { open read };
+
+allow cpboot-daemon vendor_file:file execute_no_trans;
+
+allow cpboot-daemon sysfs_socinfo:file read;
+allow cpboot-daemon vendor_shell_exec:file execute_no_trans;
+
+allow cpboot-daemon sysfs_socinfo:file open;
+allow cpboot-daemon vendor_default_prop:property_service set;
+
 
 # set properties on boot
 set_prop(cpboot-daemon, cpboot-daemon_prop)
