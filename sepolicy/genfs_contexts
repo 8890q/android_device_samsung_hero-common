@@ -14,7 +14,7 @@ genfscon proc /simslot_count    u:object_r:proc_simslot_count:s0
 genfscon proc /bus/input/devices    u:object_r:proc_input_devices:s0
 
 # SEC devices
-genfscon proc /sec_log          u:object_r:proc_sec:s0
+genfscon proc /sec_log         u:object_r:proc_sec:s0
 genfscon sysfs /class/sec      u:object_r:sysfs_sec:s0
 
 # Power supply devices
@@ -34,8 +34,8 @@ genfscon sysfs /devices/gpio_keys/input/input10                             u:ob
 genfscon sysfs /devices/hall/input/input11                                  u:object_r:sysfs_input:s0
 
 # S7 power devices
-genfscon sysfs /devices/13650000.hsi2c/i2c-1/1-0066/max77854-charger/power_supply      u:object_r:sysfs_usb_supply:s0
-genfscon sysfs /devices/13650000.hsi2c/i2c-1/1-0066/max77854-fuelgauge/power_supply    u:object_r:sysfs_usb_supply:s0
+genfscon sysfs /devices/13650000.hsi2c/i2c-1/1-0066/max77854-charger      u:object_r:sysfs_usb_supply:s0
+genfscon sysfs /devices/13650000.hsi2c/i2c-1/1-0066/max77854-fuelgauge    u:object_r:sysfs_usb_supply:s0
 
 # S7 Input devices
 genfscon sysfs /devices/14e10000.hsi2c/i2c-4/4-0048/input                         u:object_r:sysfs_input:s0
@@ -89,7 +89,7 @@ genfscon sysfs /devices/virtual/bdi/179:0/read_ahead_kb     u:object_r:sysfs_blo
 genfscon sysfs /devices/virtual/bdi/179:32/read_ahead_kb    u:object_r:sysfs_block:s0
 
 # ION
-genfscon sysfs /devices/virtual/misc/ion u:object_r:sysfs_ion:s0
+genfscon sysfs /devices/virtual/misc/ion                    u:object_r:sysfs_ion:s0
 
 # lhd
 genfscon sysfs /devices/136d0000.pinctrl/gpio/gpio101                      u:object_r:sysfs_lhd:s0

@@ -32,12 +32,23 @@
 
 /dev/block/mmcblk0p[0-9]*    u:object_r:emmcblk_device:s0
 
+/dev/block/sda1             u:object_r:bota_block_device:s0
+/dev/block/sda2             u:object_r:bota_block_device:s0
 /dev/block/sda3             u:object_r:efs_block_device:s0
+/dev/block/sda4             u:object_r:param_block_device:s0
 /dev/block/sda5             u:object_r:boot_block_device:s0
+/dev/block/sda6             u:object_r:recovery_block_device:s0
+/dev/block/sda7             u:object_r:ota_block_device:s0
 /dev/block/sda8             u:object_r:radio_block_device:s0
+/dev/block/sda9             u:object_r:tombstones_block_device:s0
+/dev/block/sda10            u:object_r:dnt_block_device:s0
 /dev/block/sda11            u:object_r:persist_block_device:s0
+/dev/block/sda12            u:object_r:steady_block_device:s0
+/dev/block/sda13            u:object_r:persdata_block_device:s0
 /dev/block/sda14            u:object_r:system_block_device:s0
 /dev/block/sda15            u:object_r:cache_block_device:s0
+/dev/block/sda16            u:object_r:hidden_block_device:s0
+/dev/block/sda17            u:object_r:debug_block_device:s0
 /dev/block/sda18            u:object_r:userdata_block_device:s0
 /dev/block/zram0            u:object_r:swap_block_device:s0
 
@@ -91,10 +102,11 @@
 # Data Files
 
 # biometrics
-/data/biometrics(/.*)?             u:object_r:fingerprintd_data_file:s0
+/data/biometrics(/.*)?             u:object_r:biometrics_data_file:s0
+/data/vendor/biometrics(/.*)?      u:object_r:biometrics_vendor_data_file:s0
 
 # camera
-/data/camera(/.*)?                 u:object_r:camera_data_file:s0
+/data/camera(/.*)?                u:object_r:camera_data_file:s0
 
 # Display
 /data/vendor/display(/.*)?        u:object_r:display_vendor_data_file:s0
@@ -107,15 +119,17 @@
 
 # NFC
 /data/nfc(/.*)?                   u:object_r:nfc_data_file:s0
+/data/bcmnfc(/.*)?                u:object_r:nfc_data_file:s0
 
 # Radio
 /data/misc/radio(/.*)?            u:object_r:radio_data_file:s0
+/data/vendor/secradio(/.*)?       u:object_r:radio_vendor_data_file:s0
 
 # tee
 /data/misc/mcRegistry(/.*)?       u:object_r:mobicore_data_file:s0
 
 # wifi
-/data/misc/conn\.cid\.info            u:object_r:wifi_data_file:s0
+/data/misc/conn/\.cid\.info       u:object_r:wifi_data_file:s0
 /data/misc/conn/\.wifiver\.info   u:object_r:wifi_data_file:s0
 
 ####################################
@@ -168,8 +182,12 @@
 /dev/socket/rild2                           u:object_r:rild_socket:s0
 /dev/socket/rild-debug2                     u:object_r:rild_debug_socket:s0
 
+# TSP
+/sys/devices/virtual/sec/tsp(/.*)?          u:object_r:sysfs_tsp:s0
+
 # Wifi
 /sys/module/dhd/parameters/firmware_path    u:object_r:sysfs_wifi:s0
+/sys/module/dhd/parameters/nvram_path       u:object_r:sysfs_wifi:s0
 
 ####################################
 # Daemons

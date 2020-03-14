@@ -29,7 +29,6 @@ type proc_input_devices, fs_type, proc_type;
 type proc_sec, fs_type, proc_type;
 
 ### sysfs types
-#type sysfs_writable, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_mdnie, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_mipi, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_multipdp, fs_type, sysfs_type, mlstrustedobject;
@@ -47,10 +46,15 @@ type sysfs_ion, sysfs_type, fs_type, mlstrustedobject;
 type sysfs_block, sysfs_type, fs_type, mlstrustedobject;
 type sysfs_jack, sysfs_type, fs_type, mlstrustedobject;
 type sysfs_v4l, sysfs_type, fs_type, mlstrustedobject;
+type sysfs_tsp, fs_type, sysfs_type;
 type sysfs_dt2w, sysfs_type, fs_type, mlstrustedobject;
 type sysfs_lhd, fs_type, sysfs_type, fs_type, mlstrustedobject;
 type sysfs_modem, fs_type, sysfs_type, mlstrustedobject;
 
 ### data types
 type display_vendor_data_file, file_type, data_file_type;
+type biometrics_data_file, core_data_file_type, data_file_type, file_type;
+type biometrics_vendor_data_file, data_file_type, file_type;
+type radio_vendor_data_file, data_file_type, file_type;
+
 

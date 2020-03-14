@@ -6,8 +6,5 @@ allow netd gpsd:udp_socket rw_socket_perms;
 allow netd gpsd:tcp_socket rw_socket_perms;
 allow netd init:tcp_socket { read write };
 
-# LABELME
-allow netd device:file {read write open};
-allow netd device:file open;
 allow netd init:tcp_socket getopt;
-
+allow netd init:tcp_socket setopt;

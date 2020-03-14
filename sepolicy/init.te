@@ -20,9 +20,6 @@ allow init sysfs_usb_supply:file { rw_file_perms setattr };
 # /data
 allow init sdcardd_exec:file r_file_perms;
 
-# sysfs iio:device[0-9]
-allow init sysfs:lnk_file setattr;
-
 # sysfs ion device
 allow init sysfs_ion:file setattr;
 
@@ -96,6 +93,8 @@ allow init sysfs_wake_lock:file { append open };
 allow init sysfs_lhd:file { open read write };
 allow init sysfs_dt2w:file { open read write };
 allow init sysfs_dt2w:file setattr;
+allow init sysfs_tsp:file setattr;
+allow init sysfs_tsp:lnk_file read;
 
 # Proc files
 allow init proc_reset_reason:file { rw_file_perms setattr };

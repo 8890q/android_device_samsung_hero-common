@@ -9,8 +9,6 @@ wakelock_use(cbd);
 
 allow cbd self:capability { setuid setgid };
 
-# FIXME neverallow rule
-# allow cbd self:capability mknod;
 allow cbd kernel:system syslog_read;
 allow cbd cgroup:dir create_dir_perms;
 
