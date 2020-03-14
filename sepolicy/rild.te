@@ -67,10 +67,6 @@ allow rild self:capability chown;
 allow rild audioserver:dir search;
 allow rild audioserver:file { read open getattr };
 
-allow rild default_android_hwservice:hwservice_manager add;
-allow rild init:binder call;
 allow rild init:dir search;
 allow rild init:file { getattr open read };
-allow rild vendor_data_file:dir { add_name open read remove_name write };
-allow rild vendor_data_file:file { create getattr ioctl lock open read unlink write };
 

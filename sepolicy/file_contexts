@@ -92,7 +92,6 @@
 
 # biometrics
 /data/biometrics(/.*)?             u:object_r:fingerprintd_data_file:s0
-/data/vendor/biometrics(/.*)?      u:object_r:fingerprintd_data_file:s0
 
 # camera
 /data/camera(/.*)?                 u:object_r:camera_data_file:s0

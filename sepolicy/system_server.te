@@ -57,10 +57,7 @@ allow system_server proc_input_devices:file r_file_perms;
 unix_socket_connect(system_server, property, gpsd)
 
 # Shall we allow this ?
-allow system_server init:binder { call transfer };
 allow system_server crash_dump:process getpgid;
-allow system_server debugfs:file read;
-allow system_server debugfs:file open;
 allow system_server debugfs:file getattr;
 
 
