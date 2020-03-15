@@ -29,3 +29,5 @@ allow hal_power_default sysfs_sec_tsp:file rw_file_perms;
 allow hal_power_default sysfs:dir read;
 allow hal_power_default sysfs:dir open;
 
+allow hal_power_default sysfs_input:lnk_file read;
+

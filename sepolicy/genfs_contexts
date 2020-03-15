@@ -11,7 +11,7 @@ genfscon debugfs /debug/ipa                                u:object_r:debugfs_ip
 # Proc
 #
 
-genfscon proc /device-tree u:object_r:proc_dt_firmware:s0
+genfscon proc /device-tree                     u:object_r:proc_dt_firmware:s0
 
 genfscon proc /sys/vm/dirty_ratio               u:object_r:proc_vm:s0
 genfscon proc /sys/vm/dirty_bytes               u:object_r:proc_vm:s0
@@ -34,6 +34,7 @@ genfscon proc /sec_log                          u:object_r:proc_sec:s0
 
 # Audio
 genfscon sysfs /devices/virtual/audio/earjack       u:object_r:sysfs_jack:s0
+genfscon sysfs /devices/virtual/audio/codec         u:object_r:sysfs_codec:s0
 
 # Camera
 genfscon sysfs /devices/virtual/camera              u:object_r:sysfs_camera:s0
@@ -44,20 +45,20 @@ genfscon sysfs /devices/152e0000.mfc0/video7/name   u:object_r:sysfs_camera:s0
 genfscon sysfs /power/cpufreq_table                                 u:object_r:sysfs_devices_system_cpu:s0
 genfscon sysfs /power/cpufreq_min_limit                             u:object_r:sysfs_devices_system_cpu:s0
 genfscon sysfs /power/cpufreq_max_limit                             u:object_r:sysfs_devices_system_cpu:s0
+genfscon sysfs /power/cpuhotplug                                    u:object_r:sysfs_devices_system_cpu:s0
+genfscon sysfs /power/call_state                                    u:object_r:sysfs_devices_system_cpu:s0
 
 genfscon sysfs /module/cpuidle/parameters/off                       u:object_r:sysfs_devices_system_cpu:s0
 genfscon sysfs /module/cpuidle_exynos64/parameters/enable_mask      u:object_r:sysfs_devices_system_cpu:s0
 
 genfscon sysfs /module/workqueue/parameters/power_efficient         u:object_r:sysfs_devices_system_cpu:s0
 
-genfscon sysfs /firmware/devicetree/base/cpus/hmp/down_threshold    u:object_r:sysfs_devices_system_cpu:s0
-
-genfscon sysfs /power/cpuhotplug                                    u:object_r:sysfs_devices_system_cpu:s0
-
 genfscon sysfs /power/ipa                                           u:object_r:sysfs_devices_system_cpu:s0
 genfscon sysfs /firmware/devicetree/base/ipa_pdata                  u:object_r:sysfs_devices_system_cpu:s0
 
 genfscon sysfs /kernel/hmp/down_threshold                           u:object_r:sysfs_devices_system_cpu:s0
+
+genfscon sysfs /firmware/devicetree/base/cpus/hmp/down_threshold    u:object_r:sysfs_socinfo:s0
 
 # Decon
 genfscon sysfs /devices/13960000.decon_f  u:object_r:sysfs_graphics:s0
@@ -107,10 +108,10 @@ genfscon sysfs /devices/virtual/net/rmnet6 u:object_r:sysfs_net:s0
 genfscon sysfs /devices/virtual/net/rmnet7 u:object_r:sysfs_net:s0
 
 # USB lun device
-genfscon sysfs /devices/virtual/android_usb/android0/f_mass_storage/lun    u:object_r:sysfs_android_usb:s0
+genfscon sysfs /devices/15400000.usb/15400000.dwc3/gadget/lun0       u:object_r:sysfs_android_usb:s0
 
 # USB
-genfscon sysfs /devices/virtual/android_usb/android0/state                 u:object_r:sysfs_android_usb:s0
+genfscon sysfs /devices/virtual/android_usb/android0                 u:object_r:sysfs_android_usb:s0
 
 # video4linux
 genfscon sysfs /devices/fimc_is_preprocessor@14020000/video4linux   u:object_r:sysfs_v4l:s0

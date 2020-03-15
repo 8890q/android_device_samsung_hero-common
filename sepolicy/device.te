@@ -52,5 +52,3 @@ type seiren_device, dev_type;
 type gps_device, dev_type;
 
 type mobicore_data_file, data_file_type, core_data_file_type, file_type;
-
-type stune_device, dev_type;

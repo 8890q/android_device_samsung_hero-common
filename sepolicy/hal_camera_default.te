@@ -7,4 +7,6 @@ allow hal_camera_default camera_data_file:dir search;
 
 allow hal_camera_default debugfs_ion:dir search;
 
+allow hal_camera_default sysfs_camera:lnk_file read;
+
 vndbinder_use(hal_camera_default)

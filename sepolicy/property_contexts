@@ -7,6 +7,9 @@ vendor.cbd.dt_revision    u:object_r:modemloader_prop:s0
 # mobicore
 sys.mobicoredaemon.enable         u:object_r:tee_prop:s0
 
+# nfc
+persist.nfc.log.index          u:object_r:nfc_prop:s0
+
 # radio
 persist.ril.modem.board            u:object_r:radio_prop:s0
 ril.ims.ecsupport                  u:object_r:radio_prop:s0

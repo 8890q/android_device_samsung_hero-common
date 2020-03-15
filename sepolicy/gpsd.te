@@ -59,3 +59,23 @@ allow gpsd gps_vendor_file:file write;
 allow gpsd gps_vendor_file:file open;
 allow gpsd gps_vendor_file:file lock;
 
+allow gpsd self:netlink_kobject_uevent_socket create;
+allow gpsd self:netlink_kobject_uevent_socket { bind setopt };
+allow gpsd system_suspend_hwservice:hwservice_manager find;
+
+allow gpsd gps_vendor_file:file { append read };
+
+allow gpsd gps_vendor_file:file { getattr unlink };
+
+allow gpsd gps_vendor_file:file create;
+
+allow gpsd fwk_sensor_hwservice:hwservice_manager find;
+
+allow system_server gpsd:binder call;
+
+# Allow hal to take wakelock
+wakelock_use(gpsd)
+
+
+
+

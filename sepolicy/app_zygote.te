@@ -1,3 +1,0 @@
-# Shall we really allow this ?
-allow app_zygote app_data_file:dir getattr;
-

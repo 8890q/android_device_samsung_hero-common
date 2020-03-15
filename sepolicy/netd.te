@@ -9,6 +9,5 @@ allow netd init:tcp_socket { read write };
 allow netd init:tcp_socket getopt;
 allow netd init:tcp_socket setopt;
 
-allow netd stune_device:file w_file_perms;
 allow netd sysfs_net:dir search;
 allow netd sysfs_net:file w_file_perms;
