@@ -85,7 +85,7 @@ genfscon sysfs /devices/14d20000.spi/spi_master/spi0/spi0.0/arizona-extcon/input
 # ION
 genfscon sysfs /devices/virtual/misc/ion                    u:object_r:sysfs_ion:s0
 
-# lhd
+# LHD
 genfscon sysfs /devices/136d0000.pinctrl/gpio/gpio101       u:object_r:sysfs_lhd:s0
 
 # MMC block device cache files

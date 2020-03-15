@@ -1,21 +1,21 @@
-# cbd
+# CBD
 vendor.cbd.rfs_check_done          u:object_r:cpboot-daemon_prop:s0
 
-# modemloader
-vendor.cbd.dt_revision    u:object_r:modemloader_prop:s0
-
-# mobicore
+# Mobicore
 sys.mobicoredaemon.enable         u:object_r:tee_prop:s0
 
-# nfc
+# Modemloader
+vendor.cbd.dt_revision    u:object_r:modemloader_prop:s0
+
+# NFC
 persist.nfc.log.index          u:object_r:nfc_prop:s0
 
-# radio
+# Radio
 persist.ril.modem.board            u:object_r:radio_prop:s0
 ril.ims.ecsupport                  u:object_r:radio_prop:s0
 ril.ims.ltevoicesupport            u:object_r:radio_prop:s0
 
-# wifi
+# Wifi
 wifi.active.interface      u:object_r:wifi_prop:s0
 wifi.direct.interface      u:object_r:wifi_prop:s0
 wifi.interface             u:object_r:wifi_prop:s0
