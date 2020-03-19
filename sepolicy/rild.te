@@ -80,6 +80,7 @@ allow rild hal_sec_radio_secbridge_hwservice:hwservice_manager add;
 allow rild hal_sec_radio_sechook_hwservice:hwservice_manager add;
 
 allow rild hal_radio_default:binder call;
+allow rild imei_efs_file:file setattr;
 
 set_prop(rild, cpboot-daemon_prop)
 

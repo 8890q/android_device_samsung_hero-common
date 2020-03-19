@@ -292,6 +292,8 @@ on post-fs-data
     # biometrics
     mkdir /data/biometrics 0700 system system
     restorecon /data/biometrics
+    mkdir /data/vendor/biometrics 0700 system system
+    restorecon /data/vendor/biometrics
 
     mkdir /data/misc/radio 0775 system radio
     mkdir /data/misc/wifi_hostapd 0771 wifi system

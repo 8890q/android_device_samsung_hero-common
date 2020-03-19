@@ -41,6 +41,8 @@ allow lhd sysfs_lhd:dir search;
 allow lhd sysfs_lhd:file { read write };
 allow lhd sysfs_lhd:file open;
 allow lhd gps_vendor_file:dir add_name;
+allow lhd gps_vendor_file:file create;
+allow lhd gps_vendor_file:fifo_file create;
 
 # Allow hal to take wakelock
 wakelock_use(lhd)
