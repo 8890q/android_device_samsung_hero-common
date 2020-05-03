@@ -40,7 +40,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # OMX
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.media.treble_omx=false \
-    debug.sf.latch_unsignaled=1
+    debug.sf.latch_unsignaled=1 \
+    debug.sf.disable_backpressure=1
 
 # SdcardFS
 PRODUCT_PROPERTY_OVERRIDES += \
