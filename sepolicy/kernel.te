@@ -32,3 +32,5 @@ allow kernel sysfs_sensors:file { open read };
 
 allow kernel sysfs_sec_key:dir search;
 allow kernel sysfs_sec_key:file { open read };
+
+allow kernel sensor_factoryapp_efs_file:file { open read write };
