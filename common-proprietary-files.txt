@@ -107,6 +107,11 @@ vendor/lib64/libHpr_LocFace_mvfd_v1.0.so
 vendor/lib/libHpr_LocLandmark_sdm_v1.0.so
 vendor/lib64/libHpr_LocLandmark_sdm_v1.0.so
 
+# DRM - Widevine
+vendor/bin/hw/android.hardware.drm@1.1-service.widevine|e014cd07036970f01751a2aa937e92816f3a5152
+vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc|6d73a2063f155dcbd5ba95ca2d85e184cda61127
+vendor/lib/libwvhidl.so|e720c357a8899738eb243c909d6ff6922039de74
+
 # Fingerprint
 app/mcRegistry/ffffffff00000000000000000000000e.tlbin
 app/mcRegistry/ffffffffd0000000000000000000000e.tlbin
@@ -160,7 +165,7 @@ vendor/firmware/setfile_4e6.bin
 vendor/firmware/setfile_4e6_d.bin
 vendor/firmware/setfile_imx260.bin
 vendor/firmware/setfile_imx260_d.bin
-vendor/lib/mediadrm/libwvdrmengine.so
+vendor/lib/mediadrm/libwvdrmengine.so|c172a907a8c268878ff30c8af44f561f14986745
 vendor/lib/libSEF.so
 vendor/lib64/libSEF.so
 lib/libcsc.so
